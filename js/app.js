@@ -1,8 +1,21 @@
 (function(){
+   /*  ############### Var e Consts Globais #################   */
+   var bgDiv = $('#bg')
+
+   function bgIn(delay = 300) {
+      bgDiv.fadeIn(delay)
+   }
+
+   function bgOut(delay = 300) {
+      bgDiv.fadeOut(delay)
+   }
+
+
    /*  ############### Parte de Toggle Menu #################   */
    var btnToggle = document.querySelector('#btn-toggle')
    var btnToggleIcon = document.querySelector('#btn-toggle-icon')
    var navBar = document.querySelector('.sidebar')
+   var navBarJQ = $('.sidebar')
 
    function toggleSidebar() {
       var isActive = navBar.classList.contains('active')
@@ -12,9 +25,11 @@
       if(isActive) {
          navBar.classList.remove('active')
          btnToggleIcon.classList.add('fa-bars')
+         bgOut()
       } else {
          btnToggleIcon.classList.add('fa-times')
          navBar.classList.add('active')
+         bgIn()
       }
    }
 
@@ -26,6 +41,11 @@
       }
    })
 
+   navBarJQ.hover(
+      () => bgIn(),
+      () => bgOut()
+   )
+
 
    /*  ############### Parte de Toggle Item do Menu #################   */
    var btnFinanceiro = document.querySelector('#navbar-dropdown')
@@ -33,10 +53,5 @@
 
    btnFinanceiro.onclick = () => itemsMenuHidden.slideToggle(400)
 
-   /* ############## Parte para lupa do header ########### */
-   var btnLupa = document.querySelector('#btn-lupa')
-   var inputHeader = $('#input-header')
-
-   btnLupa.onclick = () => inputHeader.fadeToggle(1000)
 
 })()
