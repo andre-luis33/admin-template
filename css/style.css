@@ -1,0 +1,130 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Jost', serif;
+}
+
+:root {
+   --sidebar-bg: #080416;
+   --main-border: 1px solid #ddd;
+}
+
+html, body {
+   height: 100%;
+   background: #eee;
+}
+
+.header {
+   height: 60px;
+   -webkit-box-shadow: 2px 6px 6px -7px rgba(0,0,0,0.75);
+   -moz-box-shadow: 2px 6px 6px -7px rgba(0,0,0,0.75);
+   box-shadow: 2px 6px 6px -7px rgba(0,0,0,0.75);
+   background: #fff;
+   
+   display: flex;
+   align-items: center;
+   margin-left: 60px;
+   position: relative;
+}
+
+.header .logo {
+   margin: 0 15px;
+   padding-right: 15px;
+   border-right: var(--main-border);
+}
+
+.header .logo img {
+   width: 150px;
+}
+
+.header .email {
+   flex: 1;
+   text-align: right;
+   margin-right: 20px;
+}
+
+main {
+   display: flex;
+   height: calc(100% - 60px);
+}
+
+main .content {
+   width: 100%;
+   margin-left: 60px;
+}
+
+main .sidebar {
+   background: var(--sidebar-bg);
+   color: #bababa;
+   height: 100%;
+   position: absolute;
+   width: 260px;
+   transition: .3s;
+   left: -200px;
+   top: 0px;
+}
+
+main .sidebar .btn-toggle {
+   background-color: var(--sidebar-bg);
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+
+   font-size: 1rem;
+   color: #fff;
+   cursor: pointer;
+   z-index: 10;
+   padding: 25px 25px 25px 15px;
+}
+
+main .sidebar .btn-toggle img {
+   width: 100px;
+   /* height: 30px; */
+}
+
+main .sidebar ul {
+   /* margin-top: 15px; */
+   list-style: none;
+}
+
+main .sidebar ul li.hidden-navbar-item {
+   display: none;
+   background-color: #19113890;
+   padding-left: 30px;
+   position: relative;
+}
+
+main .sidebar ul li.hidden-navbar-item::before {
+   content: '';
+   display: block;
+   height: 2px;
+   width: 8px;
+   background: #fff;
+   position: absolute;
+   left: 10px;
+   top: 22px;
+}
+
+main .sidebar ul li a {
+   color: #bababa;
+   text-decoration: none;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   font-size: .9rem;
+   padding: 10px 25px 10px 15px;
+   transition: .3s all;
+}
+
+main .sidebar ul li a:hover {
+   background-color: #3c2d7790;
+}
+
+main .sidebar.active { 
+   left: 0;
+}
+
+main .sidebar:hover {
+   left: 0;
+}
