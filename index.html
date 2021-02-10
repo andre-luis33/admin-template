@@ -7,6 +7,8 @@
    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
    <link rel="stylesheet" href="https://insightsmachine.com.br/assets/css/bootstrap.min.css">
+   
+   <link data-theme="white"  rel="stylesheet" href="css/white-mode.css">
    <link rel="stylesheet" href="css/style.css">
    <title>Dashboard</title>
 </head>
@@ -16,23 +18,28 @@
          <img src="https://insightsmachine.com.br/assets/img/logo-header.png" alt="">
       </div>
 
-      <div class="email">
-         <span id="user-email">andre.moura@insightsmachine.com.br</span>
+      <div class="btn-toggle">
+         <i class="fas fa-bars" btn-toggle-sidebar></i>
+      </div>
 
-         <i class="far fa-moon"></i>
+      <div class="right-box">
+         <span id="user-email">andre.moura@insightsmachine.com.br</span>
 
          <div class="notifications-box">
             <i class="far fa-bell"></i>
+            <span id="count-notification">5</span>
          </div>
 
+         <i class="fas fa-cog" id="btn-config"></i>
+         
       </div>
    </header>
 
    <div id="bg"></div>
 
    <main>
-      <nav class="sidebar">
-         <div class="btn-toggle" id="btn-toggle">
+      <aside class="sidebar">
+         <div class="btn-toggle" id="btn-toggle" btn-toggle-sidebar>
             <img src="https://insightsmachine.com.br/assets/img/logo-header.png" alt="">
             <i class="fas fa-bars" id="btn-toggle-icon"></i>
          </div>
@@ -92,8 +99,24 @@
                </a>
             </li>
          </ul>
-      </nav>
-      <div class="content p-5">
+      </aside>
+
+      <aside class="config-bar">
+         <span id="close-config-bar">
+            <i class="fas fa-times"></i>
+         </span>
+         <header>
+            <h4>Suas Preferências</h4>
+         </header>
+
+         <ul>
+            <li>
+               <button id="btn-theme" class="switch-btn" clicked="false"></button>
+               <span>Dark Mode</span>
+            </li>
+         </ul>
+      </aside>
+      <div class="content">
          content
       </div>
    </main>

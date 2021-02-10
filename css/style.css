@@ -5,14 +5,13 @@
    font-family: 'Jost', serif;
 }
 
-:root {
-   --sidebar-bg: #080416;
-   --main-border: 1px solid #ddd;
-}
-
 html, body {
    height: 100%;
-   background: #eee;
+   background: var(--body-bg);
+}
+
+ul {
+   list-style: none;
 }
 
 #bg {
@@ -30,12 +29,18 @@ html, body {
    -webkit-box-shadow: 2px 6px 6px -7px rgba(0,0,0,0.75);
    -moz-box-shadow: 2px 6px 6px -7px rgba(0,0,0,0.75);
    box-shadow: 2px 6px 6px -7px rgba(0,0,0,0.75);
-   background: #fff;
+   
+   background: var(--bg-header);
+   color: var(--color-header);
    
    display: flex;
    align-items: center;
    margin-left: 60px;
    position: relative;
+}
+
+.header .btn-toggle {
+   display: none;
 }
 
 .header .logo {
@@ -48,26 +53,41 @@ html, body {
    width: 150px;
 }
 
-.header .email {
+.header .right-box {
    flex: 1;
    text-align: right;
    margin-right: 40px;
 
    display: flex;
    justify-content: flex-end;
-   align-items: center;
 }
 
-.header .email #user-email {
+.header .right-box #user-email {
    margin-right: 15px;
 }
 
-.header .email i {
+.header .right-box i {
    margin: 0 10px;
-   font-size: 1.1rem;
+   font-size: 1.2rem;
    color: #444;
    cursor: pointer;
 }
+
+.header .right-box .notifications-box {
+   position: relative;
+}
+
+.header .right-box .notifications-box #count-notification {
+   position: absolute;
+   top: -7px;
+   right: 2px;
+   background: #d32c2c;
+   color: #fff;
+   padding: 0 4px;
+   font-size: .7rem;
+   border-radius: 20px;
+}
+
 
 main {
    display: flex;
@@ -98,7 +118,7 @@ main .sidebar .btn-toggle {
    align-items: center;
 
    font-size: 1rem;
-   color: #fff;
+   color: var(--color-sidebar-bg);
    cursor: pointer;
    z-index: 10;
    padding: 25px 25px 25px 15px;
@@ -106,11 +126,6 @@ main .sidebar .btn-toggle {
 
 main .sidebar .btn-toggle img {
    width: 100px;
-}
-
-main .sidebar ul {
-   /* margin-top: 15px; */
-   list-style: none;
 }
 
 main .sidebar ul li.hidden-navbar-item {
@@ -132,7 +147,7 @@ main .sidebar ul li.hidden-navbar-item::before {
 }
 
 main .sidebar ul li a {
-   color: #bababa;
+   color: var(--color-sidebar-bg);
    text-decoration: none;
    display: flex;
    align-items: center;
@@ -152,4 +167,119 @@ main .sidebar.active {
 
 main .sidebar:hover {
    left: 0;
+}
+
+main .config-bar {
+   background: var(--bg-boxes);
+   color: var(--color-boxes);
+   
+   height: 100%;
+   width: 260px;
+   
+   position: absolute;
+   right: 0px;
+   top: 0px;
+   /* transition: .3s; */
+   z-index: 110;
+
+   padding: 15px;
+   display: none;
+}
+/* 
+main .config-bar.active {
+   right: 0px;
+} */
+
+main .config-bar #close-config-bar {
+   position: absolute;
+   top: 5px;
+   right: 20px;
+   font-size: 1.3rem;
+   cursor: pointer;
+}
+
+main .config-bar header {
+   border-bottom: var(--main-border);
+   margin-bottom: 15px;
+}
+
+main .config-bar li {
+   display: flex;
+   align-items: center;
+}
+
+main .config-bar span {
+   margin-left: 15px;
+}
+
+main .config-bar .switch-btn {
+   height: 20px;
+   width: 40px;
+
+   outline: 0;
+   border: 0;
+   background: var(--btn-switch-bg);
+   border-radius: 10px;
+
+   position: relative;
+   cursor: pointer;
+}
+
+main .config-bar .switch-btn::after {
+   content: '';
+   display: block;
+   
+   height: 20px;
+   width: 20px;
+   background: var(--btn-switch-toggle);
+
+   border-radius: 50%;
+
+   position: absolute;
+   top: 0;
+   transition: .3s all;
+   right: 20px;
+}
+
+main .config-bar .switch-btn[clicked="true"]::after {
+   right: 0px;
+}
+
+main .content {
+   padding: 20px;
+   color: var(--body-color);
+}
+
+@media (max-width: 768px) {
+   html, main, body {
+      overflow: hidden;
+   }
+
+   .header {
+      margin-left: 0px;
+      /* padding-left: 20px; */
+      width: 100%;
+   }   
+
+   .header .logo {
+      display: none;
+   }
+   
+   .header .btn-toggle {
+      display: block;
+      padding: 20px;
+      font-size: 1.5em;
+   }
+   
+   .header .right-box {
+      margin-right: 0;
+   }
+
+   .header #user-email {
+      display: none;
+   }
+
+   main .sidebar {
+      left: -260px;
+   }
 }

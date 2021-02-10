@@ -1,0 +1,19 @@
+
+:root {
+   --body-bg: #2e2e2e;
+   --body-color: #fff;
+
+   --main-border: 1px solid #555;
+
+   --sidebar-bg: #080416;
+   --color-sidebar-bg: #bababa;
+
+   --color-header: #fff;
+   --bg-header: #000;
+
+   --bg-boxes: #111;
+   --color-boxes: #fff;
+
+   --btn-switch-bg: #333;
+   --btn-switch-toggle: #000;
+}

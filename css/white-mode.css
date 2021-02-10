@@ -1,0 +1,20 @@
+
+:root {
+   --body-bg: #eee;
+   --body-color: #222;
+
+   --main-border: 1px solid #ddd;
+
+   --sidebar-bg: #080416;
+   --color-sidebar-bg: #bababa;
+
+   --color-header: #222;
+   --bg-header: #fff;
+
+   --bg-boxes: #fff;
+   --color-boxes: #222;
+
+   
+   --btn-switch-bg: #eee;
+   --btn-switch-toggle: #ddd;
+}
