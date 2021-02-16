@@ -1,3 +1,4 @@
+/* Globais */
 * {
    margin: 0;
    padding: 0;
@@ -8,13 +9,30 @@
 html, body {
    height: 100%;
    background: var(--body-bg);
+   overflow: hidden;
 }
 
 ul {
    list-style: none;
 }
 
-#bg {
+::-webkit-scrollbar { 
+   background-color: transparent;
+   width: 10px;
+   border-radius: 50%;
+}
+
+::-webkit-scrollbar-track:hover {
+   background: var(--scrollbar-hover-color);
+}
+
+::-webkit-scrollbar-thumb        { 
+   background: var(--scrollbar-color);
+   width: 1px;
+   border-radius: 5px;
+}
+
+#bg, .bg {
    width: 100%;
    height: 100%;
    background-color: rgba(0, 0, 0, 0.433);
@@ -24,6 +42,7 @@ ul {
    display: none;
 }
 
+/* Header */
 .header {
    height: 60px;
    -webkit-box-shadow: 2px 6px 6px -7px rgba(0,0,0,0.75);
@@ -47,10 +66,21 @@ ul {
    margin: 0 15px;
    padding-right: 15px;
    border-right: var(--main-border);
+   color: var(--color-header);
+
+   display: flex;
+   align-items: center;
+   cursor: pointer;
+   text-decoration: none;
 }
 
-.header .logo img {
-   width: 150px;
+.header .logo i {
+   font-size: 3rem;
+}
+
+.header .logo span {
+   font-size: 1.5rem;
+   margin-left: 15px;
 }
 
 .header .right-box {
@@ -69,7 +99,7 @@ ul {
 .header .right-box i {
    margin: 0 10px;
    font-size: 1.2rem;
-   color: #444;
+   color: var(--color-header);
    cursor: pointer;
 }
 
@@ -94,11 +124,7 @@ main {
    height: calc(100% - 60px);
 }
 
-main .content {
-   width: 100%;
-   margin-left: 60px;
-}
-
+/* sidebar */
 main .sidebar {
    background: var(--sidebar-bg);
    color: #bababa;
@@ -109,6 +135,7 @@ main .sidebar {
    left: -200px;
    top: 0px;
    z-index: 110;
+   overflow-y: scroll;
 }
 
 main .sidebar .btn-toggle {
@@ -124,8 +151,8 @@ main .sidebar .btn-toggle {
    padding: 25px 25px 25px 15px;
 }
 
-main .sidebar .btn-toggle img {
-   width: 100px;
+main .sidebar .btn-toggle i:first-child {
+   font-size: 3rem;
 }
 
 main .sidebar ul li.hidden-navbar-item {
@@ -161,14 +188,19 @@ main .sidebar ul li a:hover {
    background-color: #3c2d7790;
 }
 
-main .sidebar.active { 
+main .sidebar.active  { 
    left: 0;
+}
+
+main .sidebar::-webkit-scrollbar { 
+   display: none;
 }
 
 main .sidebar:hover {
    left: 0;
 }
 
+/* config bar */
 main .config-bar {
    background: var(--bg-boxes);
    color: var(--color-boxes);
@@ -185,10 +217,6 @@ main .config-bar {
    padding: 15px;
    display: none;
 }
-/* 
-main .config-bar.active {
-   right: 0px;
-} */
 
 main .config-bar #close-config-bar {
    position: absolute;
@@ -245,9 +273,91 @@ main .config-bar .switch-btn[clicked="true"]::after {
    right: 0px;
 }
 
+/* conteudo */
+
 main .content {
-   padding: 20px;
    color: var(--body-color);
+   
+   margin-left: 60px;
+   padding: 20px;
+
+   overflow-y: scroll;
+   overflow-x: hidden;
+   
+   height: 100%;
+   width: 100%;
+}
+
+main .content-loader {
+   height: 100%;
+   background-color: rgba(0, 0, 0, 0.611);
+   
+   display: none;
+   justify-content: center;
+   align-items: center;
+   
+   position: absolute;
+   top: 60px;
+   left: 60px;
+   width: 100%;
+}
+
+main .content .page-title {
+   display: flex;
+   align-items: center;
+   color: var(--body-color);
+}
+
+main .content .page-title  i {
+   font-size: 2.5rem;
+   margin-right: 15px;
+   animation: pageTitleIcon forwards .5s;
+   transform: translate(-200px, 0);
+}
+
+
+main .content .page-title h2 {
+   margin-bottom: 0;
+   animation: pageTitleH2 forwards 1s;
+}
+
+
+main .content .page-title p {
+   animation: pageTitleP forwards 1.5s;
+}
+
+/* Animations */
+
+@keyframes pageTitleIcon {
+   from {
+      transform: translate(-200px, 0);
+   }
+   
+   to {
+      transform: translate(0px, 0);
+   }
+}
+
+@keyframes pageTitleH2 {
+   from {
+      transform: translate(0, -200px);
+   }
+   
+   to {
+      transform: translate(0, 0);
+   }
+}
+
+@keyframes pageTitleP {
+   from {
+      transform: rotate3d(1, 1, 1, 0deg);
+      opacity: 0;
+   }
+   
+   to {
+      transform: rotate3d(1, 1, 1, 360deg);
+      opacity: 1;
+   }
 }
 
 @media (max-width: 768px) {
@@ -281,5 +391,9 @@ main .content {
 
    main .sidebar {
       left: -260px;
+   }
+
+   main .content {
+      margin-left: 0;
    }
 }

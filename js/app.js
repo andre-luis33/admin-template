@@ -1,27 +1,4 @@
 (function(){
-   /*  ############### Var, Consts, e funcoes Globais #################   */
-   var bgDiv = $('#bg')
-
-   function bgIn(delay = 300) {
-      bgDiv.fadeIn(delay)
-   }
-
-   function bgOut(delay = 300) {
-      bgDiv.fadeOut(delay)
-   }
-
-   function switchClick(element, clicked) {
-      if(clicked) {
-         document.querySelector(element).setAttribute('clicked', 'true')
-      } else {
-         document.querySelector(element).setAttribute('clicked', 'false')
-      }
-   }
-
-   bgDiv.click(() => {
-      closeSidebar()
-      closeConfigBar()
-   })
 
    /*  ############### Parte de Toggle Menu #################   */
    var btnToggle = $('[btn-toggle-sidebar]')
@@ -96,7 +73,8 @@
 
    var btnTheme = document.querySelector('#btn-theme')
    var themeLink = document.querySelector('[data-theme]')
-
+   var localTheme = localStorage.getItem('data-theme')
+   
    btnTheme.onclick = () => {
       var wichTheme = themeLink.getAttribute('data-theme')
 
@@ -104,14 +82,24 @@
          themeLink.href = 'css/dark-mode.css'
          themeLink.setAttribute('data-theme', 'dark')
          switchClick('#btn-theme', true)
+         localStorage.setItem('data-theme', 'dark')
       } else {
          themeLink.href = 'css/white-mode.css'
          themeLink.setAttribute('data-theme', 'white')
          switchClick('#btn-theme', false)
+         localStorage.setItem('data-theme', 'white')
       }
    }
 
-
+   if(localTheme == 'dark') {
+      themeLink.href = 'css/dark-mode.css'
+      themeLink.setAttribute('data-theme', 'dark')
+      switchClick('#btn-theme', true)
+   } else {
+      themeLink.href = 'css/white-mode.css'
+      themeLink.setAttribute('data-theme', 'white')
+      switchClick('#btn-theme', false)
+   }
 
    /*  ############### Binds do teclado #################   */
 
@@ -125,5 +113,84 @@
       }
    })
 
-   
+   /*  ############### Parte SPA #################   */
+   var linkEl = $('a[href]')
+
+   var contentBox = $('.content')
+   var contentLoader = $('.content-loader')
+
+   linkEl.click(e => {
+      e.preventDefault()
+
+      var href = e.currentTarget.href
+      var currentHref = window.location.href
+      
+      if(currentHref == href) return
+
+      setCursor('wait')
+      contentLoader.css('display', 'flex')
+
+      $.ajax({
+         url: href,
+         method: 'GET', 
+         success: data => {
+            contentBox.html(data)
+            setCursor('auto')
+            contentLoader.fadeOut(300)
+            history.pushState({ box: '.content' }, null, href)
+         },
+         error: () => {
+            setCursor('auto')
+            contentLoader.fadeOut(300)
+            contentBox.html('Erro ao carregar página :(')
+         },
+      })
+   })
+
+   window.onpopstate = e => {
+      var href = window.location.href
+      setCursor('wait')
+      contentLoader.css('display', 'flex')
+      
+      $.ajax({
+         url: href,
+         method: 'GET',
+         success: data => {
+            contentBox.html(data)
+            setCursor('auto')
+            contentLoader.fadeOut(300)
+         },
+         error: () => {
+            setCursor('auto')
+            contentLoader.fadeOut(300)
+            contentBox.html('Erro ao carregar página :(')
+         },
+      })
+   }
+
+
 })()
+
+/*  ############### Var, Consts, e funcoes Globais #################   */
+var bgDiv = $('#bg')
+
+function bgIn(delay = 300) {
+   bgDiv.fadeIn(delay)
+}
+
+function bgOut(delay = 300) {
+   bgDiv.fadeOut(delay)
+}
+
+function switchClick(element, clicked) {
+   if(clicked) {
+      document.querySelector(element).setAttribute('clicked', 'true')
+   } else {
+      document.querySelector(element).setAttribute('clicked', 'false')
+   }
+}
+
+bgDiv.click(() => {
+   closeSidebar()
+   closeConfigBar()
+})
