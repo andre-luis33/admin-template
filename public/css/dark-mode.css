@@ -6,7 +6,8 @@
    --main-border: 1px solid #555;
 
    --sidebar-bg: #080416;
-   --color-sidebar-bg: #bababa;
+   --color-sidebar-bg: #7e7e7e;
+   --coloder-sidebar-selected: #ffffff;
 
    --color-header: #fff;
    --bg-header: #000;

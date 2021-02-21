@@ -1,4 +1,5 @@
 (function(){
+   const authKey = 'g24Kw!2#BN0fAfMj89'
 
    /*  ############### Parte de Toggle Menu #################   */
    var btnToggle = $('[btn-toggle-sidebar]')
@@ -43,6 +44,10 @@
    /*  ############### Parte de Toggle Item do Menu #################   */
    var btnFinanceiro = document.querySelector('#navbar-dropdown')
    var itemsMenuHidden = $('.hidden-navbar-item[financeiro]')
+
+   var pathsFinanceiro = [
+      "cadastro-usuarios"
+   ]
 
    btnFinanceiro.onclick = () => itemsMenuHidden.slideToggle(400)
 
@@ -114,51 +119,37 @@
    })
 
    /*  ############### Parte SPA #################   */
-   var linkEl = $('a[href]')
+   var linkEl = $('[js-link]')
 
    var contentBox = $('.content')
    var contentLoader = $('.content-loader')
 
-   linkEl.click(e => {
-      e.preventDefault()
+   var currentPage = getLastPath(window.location.pathname, 'public/')
+   $(`a[js-link="${currentPage}"]`).addClass('selected')
 
-      var href = e.currentTarget.href
-      var currentHref = window.location.href
-      
-      if(currentHref == href) return
+   if(pathsFinanceiro.includes(currentPage)) {
+      itemsMenuHidden.slideDown(400)
+   }
+
+   function navigate(href) {
+      linkEl.removeClass('selected')
+      $(`[js-link="${href}"]`).addClass('selected')
 
       setCursor('wait')
       contentLoader.css('display', 'flex')
 
       $.ajax({
-         url: href,
+         url: 'spa/' + href,
          method: 'GET', 
+         beforeSend: function(request) {
+            request.setRequestHeader("auth-key", authKey);
+         },
          success: data => {
             contentBox.html(data)
             setCursor('auto')
             contentLoader.fadeOut(300)
             history.pushState({ box: '.content' }, null, href)
-         },
-         error: () => {
-            setCursor('auto')
-            contentLoader.fadeOut(300)
-            contentBox.html('Erro ao carregar página :(')
-         },
-      })
-   })
-
-   window.onpopstate = e => {
-      var href = window.location.href
-      setCursor('wait')
-      contentLoader.css('display', 'flex')
-      
-      $.ajax({
-         url: href,
-         method: 'GET',
-         success: data => {
-            contentBox.html(data)
-            setCursor('auto')
-            contentLoader.fadeOut(300)
+            currentPage = href
          },
          error: () => {
             setCursor('auto')
@@ -168,6 +159,74 @@
       })
    }
 
+   linkEl.click(e => {
+      e.preventDefault()
+
+      var href = e.currentTarget.getAttribute('js-link')
+      var currentHref = getLastPath(window.location.pathname, 'public/')
+
+      if(currentHref == href) return
+      navigate(href)
+   })
+
+   window.onpopstate = e => {
+      var href = getLastPath(window.location.pathname, 'c/')
+      navigate(href)
+   }
+
+   var pagesPaths = []
+   var linkElJS = document.querySelectorAll('a[js-link]')
+
+
+   for(var i = 0; i < linkElJS.length; i++) { // pega todas as paginas disponiveis
+      pagesPaths.push(linkElJS[i].getAttribute('js-link'))
+   }
+
+   console.log(pagesPaths)
+
+   // navegação por arrow down e arrow up
+   $(window).keydown(e => {
+      
+      if(e.altKey && e.keyCode == 40) {
+         var index = pagesPaths.indexOf(currentPage)
+         var plusOne
+         
+         if((index + 1) < pagesPaths.length) {
+            plusOne = pagesPaths[index + 1] 
+         
+         } else {
+            plusOne = pagesPaths[0] // deverá ser a primeira página na lista do menu
+         }
+
+         if(pathsFinanceiro.includes(plusOne)) {
+            itemsMenuHidden.slideDown(400)
+         } else {
+            itemsMenuHidden.slideUp(400)
+         }
+
+         navigate(plusOne)
+
+      } else if (e.altKey && e.keyCode == 38) {
+         var index = pagesPaths.indexOf(currentPage)
+         var plusOne
+         
+         if((index - 1) < 0) {
+            plusOne = pagesPaths[pagesPaths.length - 1] // deverá ser a ultima página do menu, caso ela seja logout, invés de - 1 use - 2
+            
+         } else {
+
+            plusOne = pagesPaths[index - 1] 
+         }
+
+         if(pathsFinanceiro.includes(plusOne)) {
+            itemsMenuHidden.slideDown(400)
+         } else {
+            itemsMenuHidden.slideUp(400)
+         }
+
+         navigate(plusOne)
+      }
+   })
 
 })()
 
@@ -194,3 +253,4 @@ bgDiv.click(() => {
    closeSidebar()
    closeConfigBar()
 })
+

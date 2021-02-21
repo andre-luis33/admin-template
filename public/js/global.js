@@ -125,3 +125,8 @@ function today(pattern = 'EN') {
      return dd+'/'+mm+'/'+yyyy
   }
 }
+
+function getLastPath(fullURL, needle) {
+   var neddleLen = needle.length
+   return fullURL.substr(fullURL.indexOf(needle) + neddleLen, fullURL.length)
+}
