@@ -124,7 +124,7 @@
    var contentBox = $('.content')
    var contentLoader = $('.content-loader')
 
-   var currentPage = getLastPath(window.location.pathname, 'public/')
+   var currentPage = getLastPath(window.location.pathname, 'admin-template/')
    $(`a[js-link="${currentPage}"]`).addClass('selected')
 
    if(pathsFinanceiro.includes(currentPage)) {
@@ -149,6 +149,7 @@
             setCursor('auto')
             contentLoader.fadeOut(300)
             history.pushState({ box: '.content' }, null, href)
+            document.title = 'Painel - ' + ucFirst(href)
             currentPage = href
          },
          error: () => {
@@ -163,14 +164,14 @@
       e.preventDefault()
 
       var href = e.currentTarget.getAttribute('js-link')
-      var currentHref = getLastPath(window.location.pathname, 'public/')
+      var currentHref = getLastPath(window.location.pathname, 'admin-template/')
 
       if(currentHref == href) return
       navigate(href)
    })
 
    window.onpopstate = e => {
-      var href = getLastPath(window.location.pathname, 'c/')
+      var href = getLastPath(window.location.pathname, 'admin-template/')
       navigate(href)
    }
 
@@ -253,4 +254,8 @@ bgDiv.click(() => {
    closeSidebar()
    closeConfigBar()
 })
+
+var currentPage = getLastPath(window.location.pathname, 'admin-template/')
+console.log(currentPage)
+$(`a[js-link="${currentPage}"]`).addClass('selected')
 

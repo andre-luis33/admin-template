@@ -16,7 +16,7 @@ function rotate(el, deg){
    $(el).css('transform', 'rotate('+deg+'deg)')
 }
 
-// se for necessÃ¡rio passar algum elemento especifico, passar com o seletor junto! parametro action Ã© obrigatorio!
+// se for necessário passar algum elemento especifico, passar com o seletor junto! parametro action Ã© obrigatorio!
 function setCursor(action, element = false) {
    if(!element) {
        $('body, html').css('cursor', action)
@@ -137,3 +137,11 @@ function tableWaitingResponse(el, colspan, type = 'append') {
    else 
       $(el).html(`<td class="text-center" colspan=${colspan}><i class="fas fa-circle-notch fa-spin"></i></td>`)
 }
+
+/**
+ * Capitalizes first letter
+ */
+function ucFirst(string) {
+   return string.charAt(0).toUpperCase() + string.slice(1);
+ }
+ 
