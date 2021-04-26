@@ -1,0 +1,195 @@
+
+{
+Código: 288 às 07-03-2021 15:08:42
+ Query -> SELECT count(*) as total FROM  WHERE 1=1
+42000
+1064
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE 1=1' at line 1
+}
+{
+Código: 17 às 07-03-2021 15:08:47
+ Query -> SELECT count(*) as total FROM  WHERE 1=1
+42000
+1064
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE 1=1' at line 1
+}
+{
+Código: 44 às 07-03-2021 17:23:11
+ Query -> SELECT c.*, e.firstName, e.lastName, ifnull(e.employeeNumber, "--"), 
+               FROM customers c 
+               LEFT JOIN employees e 
+               ON e.employeeNumber = c.salesRepEmployeeNumber
+               LIMIT 40 OFFSET {$offset}
+      
+42000
+1064
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM customers c 
+               LEFT JOIN employees e 
+               ON e...' at line 2
+}
+
+Código do erro: 129 às 24-04-2021 17:29:24
+{
+Erro na conexao com o servidor
+Erro: SQLSTATE[HY000] [2002] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente.
+
+}
+
+Código do erro: 581 às 24-04-2021 17:29:26
+{
+Erro na conexao com o servidor
+Erro: SQLSTATE[HY000] [2002] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente.
+
+}
+
+Código do erro: 165 às 24-04-2021 17:30:11
+{
+Erro na conexao com o servidor
+Erro: SQLSTATE[HY000] [2002] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente.
+
+}
+
+Código do erro: 652 às 24-04-2021 17:30:13
+{
+Erro na conexao com o servidor
+Erro: SQLSTATE[HY000] [2002] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente.
+
+}
+
+Código do erro: 773 às 24-04-2021 17:30:18
+{
+Erro na conexao com o servidor
+Erro: SQLSTATE[HY000] [2002] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente.
+
+}
+
+Código do erro: 152 às 24-04-2021 17:30:25
+{
+Erro na conexao com o servidor
+Erro: SQLSTATE[HY000] [2002] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente.
+
+}
+
+Código do erro: 800 às 24-04-2021 17:30:31
+{
+Erro na conexao com o servidor
+Erro: SQLSTATE[HY000] [2002] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente.
+
+}
+
+Código do erro: 898 às 24-04-2021 17:30:33
+{
+Erro na conexao com o servidor
+Erro: SQLSTATE[HY000] [2002] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente.
+
+}
+
+Código do erro: 783 às 24-04-2021 17:30:41
+{
+Erro na conexao com o servidor
+Erro: SQLSTATE[HY000] [2002] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente.
+
+}
+
+Código do erro: 622 às 24-04-2021 17:30:46
+{
+Erro na conexao com o servidor
+Erro: SQLSTATE[HY000] [2002] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente.
+
+}
+
+Código do erro: 152 às 24-04-2021 17:30:48
+{
+Erro na conexao com o servidor
+Erro: SQLSTATE[HY000] [2002] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente.
+
+}
+
+Código do erro: 21 às 24-04-2021 17:30:52
+{
+Erro na conexao com o servidor
+Erro: SQLSTATE[HY000] [2002] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente.
+
+}
+
+Código do erro: 900 às 24-04-2021 17:30:56
+{
+Erro na conexao com o servidor
+Erro: SQLSTATE[HY000] [2002] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente.
+
+}
+
+Código do erro: 642 às 24-04-2021 17:30:58
+{
+Erro na conexao com o servidor
+Erro: SQLSTATE[HY000] [2002] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente.
+
+}
+{
+Código: 374 às 24-04-2021 17:31:44
+ Query -> SELECT c.*, e.firstName, e.lastName, ifnull(e.employeeNumber, "--"), 
+               FROM customers c 
+               LEFT JOIN employees e 
+               ON e.employeeNumber = c.salesRepEmployeeNumber
+               LIMIT 40 OFFSET {$offset}
+      
+42000
+1064
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM customers c 
+               LEFT JOIN employees e 
+               ON e...' at line 2
+}
+{
+Código: 451 às 24-04-2021 17:31:53
+ Query -> SELECT c.*, e.firstName, e.lastName, ifnull(e.employeeNumber, "--"), 
+               FROM customers c 
+               LEFT JOIN employees e 
+               ON e.employeeNumber = c.salesRepEmployeeNumber
+               LIMIT 40 OFFSET {$offset}
+      
+42000
+1064
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM customers c 
+               LEFT JOIN employees e 
+               ON e...' at line 2
+}
+{
+Código: 251 às 24-04-2021 17:33:04
+ Query -> SELECT c.*, e.firstName, e.lastName, ifnull(e.employeeNumber, "--"), 
+               FROM customers c 
+               LEFT JOIN employees e 
+               ON e.employeeNumber = c.salesRepEmployeeNumber
+               LIMIT 40 OFFSET {$offset}
+      
+42000
+1064
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM customers c 
+               LEFT JOIN employees e 
+               ON e...' at line 2
+}
+{
+Código: 264 às 24-04-2021 17:33:19
+ Query -> SELECT c.*, e.firstName, e.lastName, ifnull(e.employeeNumber, "--"), 
+               FROM customers c 
+               LEFT JOIN employees e 
+               ON e.employeeNumber = c.salesRepEmployeeNumber
+               LIMIT 40 OFFSET {$offset}
+      
+42000
+1064
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM customers c 
+               LEFT JOIN employees e 
+               ON e...' at line 2
+}
+{
+Código: 489 às 24-04-2021 17:35:39
+ Query -> SELECT c.*, e.firstName, e.lastName, ifnull(e.employeeNumber, "--") 
+               FROM customers c 
+               LEFT JOIN employees e 
+               ON e.employeeNumber = c.salesRepEmployeeNumber
+               LIMIT 40 OFFSET {$offset}
+      
+42000
+1064
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '{$offset}' at line 5
+}

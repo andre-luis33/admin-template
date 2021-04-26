@@ -1,0 +1,74 @@
+<body>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+
+   <div class="widget green">
+      <div class="box">
+         <div class="text">
+            <h3>122</h3>
+            <p>Usuários</p>
+         </div>   
+         <div class="icon">
+            <i class="far fa-id-card"></i>
+         </div>
+      </div>
+      <footer>
+         <a href="">
+            Veja mais
+         </a>
+      </footer>
+   </div>
+
+
+</body>
+
+
+
+<style>
+
+* {
+   box-sizing: border-box;
+}
+
+.green {
+   --primary: #53d2d6;
+   --secondary: #1e888f;
+}
+
+.widget {
+   border: 1px solid black;
+   width: 250px;
+   border-radius: 5px;   
+   background-color: var(--primary);
+}
+
+
+.widget .box {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 10px 20px;
+}
+
+.widget .icon i {
+   color: var(--secondary);
+   font-size: 3.5rem;
+}
+
+.widget h3 {
+   font-size: 2rem;
+   margin: 0;
+}
+
+.widget footer {
+   background-color: var(--secondary);
+   width: 100%;
+   border-radius: 0 0 5px 5px;
+   padding: 5px;
+   text-align: center;
+}
+
+.widget footer a {
+   color: #fff;
+}
+
+</style>

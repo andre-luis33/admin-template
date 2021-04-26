@@ -7,3 +7,5 @@
       <p>Saiba tudo que está acontecendo em sua empresa xD</p>
    </div>
 </div>
+
+<script src="<?= JS_PAGES_PATH ?>relatorio.js"></script>

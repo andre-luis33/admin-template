@@ -11,12 +11,14 @@
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.css" integrity="sha512-/zs32ZEJh+/EO2N1b0PEdoA10JkdC3zJ8L5FTiQu82LR9S/rOQNfQN7U59U9BC12swNeRAz3HSzIL2vpp4fv3w==" crossorigin="anonymous" />
 
    <link data-theme="white"  rel="stylesheet">
-   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="assets/css/style.css">
+
+   <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>   
    <title>Dashboard</title>
 </head>
 <body>
    <header class="header">
-      <div class="logo" js-link="home">
+      <div class="logo" js-link="home" href="home">
          <i class="fab fa-php"></i>
          <span>Pretty<sup>H</sup>Pamazing</span>
       </div>
@@ -48,15 +50,21 @@
          </div>
          <ul>
             <li>
-               <a js-link="home">
+               <a js-link="home" href="home">
                   <span>Home</span>
                   <i class="fas fa-home"></i>
                </a>
             </li>
             <li>
-               <a js-link="relatorios">
+               <a js-link="relatorios" href="relatorios">
                   <span>Relatórios</span>
                   <i class="fas fa-calendar"></i>
+               </a>
+            </li>
+            <li>
+               <a js-link="clientes" href="clientes">
+                  <span>Clientes</span>
+                  <i class="far fa-id-card"></i>
                </a>
             </li>
             <li>
@@ -66,7 +74,7 @@
                </a>
             </li>
                <li class="hidden-navbar-item" financeiro>
-                  <a js-link="cadastro-usuarios">
+                  <a js-link="cadastro-usuarios" href="cadastro-usuarios">
                      <span>Cadastrar Usuários</span>
                      <i class="fas fa-users"></i>
                   </a>
@@ -106,15 +114,15 @@
          </ul>
       </aside>
       <div class="content-loader">
-         <object data="img/loading.svg" type="image/svg+xml"></object>
+         <object data="assets/img/loading.svg" type="image/svg+xml"></object>
       </div>
       <div class="content">
          <?php require $view ?>
       </div>
    </main>
-   <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>   
    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw==" crossorigin="anonymous"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.bundle.min.js" integrity="sha512-SuxO9djzjML6b9w9/I07IWnLnQhgyYVSpHZx0JV97kGBfTIsUYlWflyuW4ypnvhBrslz1yJ3R+S14fdCWmSmSA==" crossorigin="anonymous"></script>   <script src="js/global.js"></script>
-   <script src="js/app.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.bundle.min.js" integrity="sha512-SuxO9djzjML6b9w9/I07IWnLnQhgyYVSpHZx0JV97kGBfTIsUYlWflyuW4ypnvhBrslz1yJ3R+S14fdCWmSmSA==" crossorigin="anonymous"></script>   
+   <script src="assets/js/global.js"></script>
+   <script src="assets/js/app.js"></script>
 </body>
 </html>

@@ -130,3 +130,10 @@ function getLastPath(fullURL, needle) {
    var neddleLen = needle.length
    return fullURL.substr(fullURL.indexOf(needle) + neddleLen, fullURL.length)
 }
+
+function tableWaitingResponse(el, colspan, type = 'append') {
+   if(type == 'append')
+      $(el).append(`<td class="text-center" colspan=${colspan}><i class="fas fa-circle-notch fa-spin"></i></td>`)
+   else 
+      $(el).html(`<td class="text-center" colspan=${colspan}><i class="fas fa-circle-notch fa-spin"></i></td>`)
+}

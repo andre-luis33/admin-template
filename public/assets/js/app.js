@@ -84,12 +84,12 @@
       var wichTheme = themeLink.getAttribute('data-theme')
 
       if(wichTheme == 'white') {
-         themeLink.href = 'css/dark-mode.css'
+         themeLink.href = 'assets/css/dark-mode.css'
          themeLink.setAttribute('data-theme', 'dark')
          switchClick('#btn-theme', true)
          localStorage.setItem('data-theme', 'dark')
       } else {
-         themeLink.href = 'css/white-mode.css'
+         themeLink.href = 'assets/css/white-mode.css'
          themeLink.setAttribute('data-theme', 'white')
          switchClick('#btn-theme', false)
          localStorage.setItem('data-theme', 'white')
@@ -97,11 +97,11 @@
    }
 
    if(localTheme == 'dark') {
-      themeLink.href = 'css/dark-mode.css'
+      themeLink.href = 'assets/css/dark-mode.css'
       themeLink.setAttribute('data-theme', 'dark')
       switchClick('#btn-theme', true)
    } else {
-      themeLink.href = 'css/white-mode.css'
+      themeLink.href = 'assets/css/white-mode.css'
       themeLink.setAttribute('data-theme', 'white')
       switchClick('#btn-theme', false)
    }

@@ -42,7 +42,70 @@ ul {
    display: none;
 }
 
-/* Header */
+.table {
+   color: var(--body-color);
+}
+
+/* ############## widgets ############# */
+.green {
+   --primary: #09bd09;
+   --secondary: #096f09;
+}
+
+.cyan {
+   --primary: #53d2d6;
+   --secondary: #1e888f;
+}
+
+
+.widget {
+   width: 250px;
+   border-radius: 5px;   
+   background-color: var(--primary);
+   transition: .2s all;
+}
+
+.widget:hover {
+   transform: translateY(-1px);
+}
+
+.widget:hover .icon i {
+   font-size: 4.2rem;
+}
+
+.widget .box {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 5px 20px;
+}
+
+.widget .icon i {
+   color: var(--secondary);
+   font-size: 4rem;
+   transition: .2s all;
+}
+
+.widget h3 {
+   font-size: 2rem;
+   margin: 10px 0;
+}
+
+.widget footer {
+   background-color: var(--secondary);
+   width: 100%;
+   border-radius: 0 0 5px 5px;
+   padding: 5px;
+   text-align: center;
+}
+
+.widget footer a {
+   color: #fff;
+   text-decoration: none;
+}
+
+
+/* ################ Header ############### */
 .header {
    height: 60px;
    -webkit-box-shadow: 2px 6px 6px -7px rgba(0,0,0,0.75);

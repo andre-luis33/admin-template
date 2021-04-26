@@ -21,3 +21,13 @@
    --scrollbar-color: #000;
    --scrollbar-hover-color: #222;
 }
+
+.table-striped tbody tr:nth-of-type(odd) {
+   background-color: rgba(0,0,0, .4);
+}
+
+.form-control, .form-control:focus {
+   background-color: #222;
+   color: #fff;
+}
+ 
