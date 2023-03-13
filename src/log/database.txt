@@ -193,3 +193,459 @@ Código: 489 às 24-04-2021 17:35:39
 1064
 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '{$offset}' at line 5
 }
+
+Código do erro: 304 às 13-03-2023 10:17:18
+{
+Erro na conexao com o servidor
+Erro: SQLSTATE[HY000] [1049] Unknown database 'classicmodels'
+}
+
+Código do erro: 399 às 13-03-2023 10:17:18
+{
+Erro na conexao com o servidor
+Erro: SQLSTATE[HY000] [1049] Unknown database 'classicmodels'
+}
+
+Código do erro: 422 às 13-03-2023 10:17:31
+{
+Erro na conexao com o servidor
+Erro: SQLSTATE[HY000] [1049] Unknown database 'classicmodels'
+}
+
+Código do erro: 446 às 13-03-2023 10:17:31
+{
+Erro na conexao com o servidor
+Erro: SQLSTATE[HY000] [1049] Unknown database 'classicmodels'
+}
+
+Código do erro: 413 às 13-03-2023 10:17:33
+{
+Erro na conexao com o servidor
+Erro: SQLSTATE[HY000] [1049] Unknown database 'classicmodels'
+}
+
+Código do erro: 593 às 13-03-2023 10:17:42
+{
+Erro na conexao com o servidor
+Erro: SQLSTATE[HY000] [1049] Unknown database 'classicmodels'
+}
+
+Código do erro: 436 às 13-03-2023 10:17:42
+{
+Erro na conexao com o servidor
+Erro: SQLSTATE[HY000] [1049] Unknown database 'classicmodels'
+}
+
+Código do erro: 998 às 13-03-2023 10:17:45
+{
+Erro na conexao com o servidor
+Erro: SQLSTATE[HY000] [1049] Unknown database 'classicmodels'
+}
+
+Código do erro: 104 às 13-03-2023 10:17:50
+{
+Erro na conexao com o servidor
+Erro: SQLSTATE[HY000] [1049] Unknown database 'classicmodels'
+}
+
+Código do erro: 369 às 13-03-2023 10:17:50
+{
+Erro na conexao com o servidor
+Erro: SQLSTATE[HY000] [1049] Unknown database 'classicmodels'
+}
+
+Código do erro: 52 às 13-03-2023 10:18:49
+{
+Erro na conexao com o servidor
+Erro: SQLSTATE[HY000] [1049] Unknown database 'classicmodels'
+}
+
+Código do erro: 135 às 13-03-2023 10:18:49
+{
+Erro na conexao com o servidor
+Erro: SQLSTATE[HY000] [1049] Unknown database 'classicmodels'
+}
+
+Código do erro: 701 às 13-03-2023 10:18:51
+{
+Erro na conexao com o servidor
+Erro: SQLSTATE[HY000] [1049] Unknown database 'classicmodels'
+}
+
+Código do erro: 290 às 13-03-2023 10:18:53
+{
+Erro na conexao com o servidor
+Erro: SQLSTATE[HY000] [1049] Unknown database 'classicmodels'
+}
+
+Código do erro: 583 às 13-03-2023 10:18:55
+{
+Erro na conexao com o servidor
+Erro: SQLSTATE[HY000] [1049] Unknown database 'classicmodels'
+}
+
+Código do erro: 401 às 13-03-2023 10:18:55
+{
+Erro na conexao com o servidor
+Erro: SQLSTATE[HY000] [1049] Unknown database 'classicmodels'
+}
+
+Código do erro: 429 às 13-03-2023 10:18:57
+{
+Erro na conexao com o servidor
+Erro: SQLSTATE[HY000] [1049] Unknown database 'classicmodels'
+}
+
+Código do erro: 1 às 13-03-2023 10:18:57
+{
+Erro na conexao com o servidor
+Erro: SQLSTATE[HY000] [1049] Unknown database 'classicmodels'
+}
+
+Código do erro: 390 às 13-03-2023 10:19:00
+{
+Erro na conexao com o servidor
+Erro: SQLSTATE[HY000] [1049] Unknown database 'classicmodels'
+}
+
+Código do erro: 472 às 13-03-2023 10:19:15
+{
+Erro na conexao com o servidor
+Erro: SQLSTATE[HY000] [1049] Unknown database 'classicmodels'
+}
+
+Código do erro: 621 às 13-03-2023 10:19:15
+{
+Erro na conexao com o servidor
+Erro: SQLSTATE[HY000] [1049] Unknown database 'classicmodels'
+}
+
+Código do erro: 218 às 13-03-2023 10:19:17
+{
+Erro na conexao com o servidor
+Erro: SQLSTATE[HY000] [1049] Unknown database 'classicmodels'
+}
+
+Código do erro: 902 às 13-03-2023 10:19:28
+{
+Erro na conexao com o servidor
+Erro: SQLSTATE[HY000] [1049] Unknown database 'classicmodels'
+}
+
+Código do erro: 10 às 13-03-2023 10:19:31
+{
+Erro na conexao com o servidor
+Erro: SQLSTATE[HY000] [1049] Unknown database 'classicmodels'
+}
+
+Código do erro: 28 às 13-03-2023 10:19:31
+{
+Erro na conexao com o servidor
+Erro: SQLSTATE[HY000] [1049] Unknown database 'classicmodels'
+}
+
+Código do erro: 817 às 13-03-2023 10:19:33
+{
+Erro na conexao com o servidor
+Erro: SQLSTATE[HY000] [1049] Unknown database 'classicmodels'
+}
+
+Código do erro: 31 às 13-03-2023 10:20:01
+{
+Erro na conexao com o servidor
+Erro: SQLSTATE[HY000] [1049] Unknown database 'classicmodels'
+}
+
+Código do erro: 854 às 13-03-2023 10:20:04
+{
+Erro na conexao com o servidor
+Erro: SQLSTATE[HY000] [1049] Unknown database 'classicmodels'
+}
+
+Código do erro: 997 às 13-03-2023 10:20:06
+{
+Erro na conexao com o servidor
+Erro: SQLSTATE[HY000] [1049] Unknown database 'classicmodels'
+}
+
+Código do erro: 624 às 13-03-2023 10:20:06
+{
+Erro na conexao com o servidor
+Erro: SQLSTATE[HY000] [1049] Unknown database 'classicmodels'
+}
+
+Código do erro: 374 às 13-03-2023 10:20:07
+{
+Erro na conexao com o servidor
+Erro: SQLSTATE[HY000] [1049] Unknown database 'classicmodels'
+}
+
+Código do erro: 902 às 13-03-2023 10:20:09
+{
+Erro na conexao com o servidor
+Erro: SQLSTATE[HY000] [1049] Unknown database 'classicmodels'
+}
+
+Código do erro: 103 às 13-03-2023 10:20:10
+{
+Erro na conexao com o servidor
+Erro: SQLSTATE[HY000] [1049] Unknown database 'classicmodels'
+}
+
+Código do erro: 273 às 13-03-2023 10:20:10
+{
+Erro na conexao com o servidor
+Erro: SQLSTATE[HY000] [1049] Unknown database 'classicmodels'
+}
+
+Código do erro: 403 às 13-03-2023 10:20:11
+{
+Erro na conexao com o servidor
+Erro: SQLSTATE[HY000] [1049] Unknown database 'classicmodels'
+}
+
+Código do erro: 337 às 13-03-2023 10:20:13
+{
+Erro na conexao com o servidor
+Erro: SQLSTATE[HY000] [1049] Unknown database 'classicmodels'
+}
+
+Código do erro: 374 às 13-03-2023 10:20:13
+{
+Erro na conexao com o servidor
+Erro: SQLSTATE[HY000] [1049] Unknown database 'classicmodels'
+}
+
+Código do erro: 797 às 13-03-2023 10:20:25
+{
+Erro na conexao com o servidor
+Erro: SQLSTATE[HY000] [1049] Unknown database 'classicmodels'
+}
+
+Código do erro: 757 às 13-03-2023 10:20:28
+{
+Erro na conexao com o servidor
+Erro: SQLSTATE[HY000] [1049] Unknown database 'classicmodels'
+}
+
+Código do erro: 175 às 13-03-2023 10:20:28
+{
+Erro na conexao com o servidor
+Erro: SQLSTATE[HY000] [1049] Unknown database 'classicmodels'
+}
+
+Código do erro: 410 às 13-03-2023 10:20:31
+{
+Erro na conexao com o servidor
+Erro: SQLSTATE[HY000] [1049] Unknown database 'classicmodels'
+}
+
+Código do erro: 697 às 13-03-2023 10:20:33
+{
+Erro na conexao com o servidor
+Erro: SQLSTATE[HY000] [1049] Unknown database 'classicmodels'
+}
+
+Código do erro: 904 às 13-03-2023 10:20:33
+{
+Erro na conexao com o servidor
+Erro: SQLSTATE[HY000] [1049] Unknown database 'classicmodels'
+}
+
+Código do erro: 188 às 13-03-2023 10:20:35
+{
+Erro na conexao com o servidor
+Erro: SQLSTATE[HY000] [1049] Unknown database 'classicmodels'
+}
+
+Código do erro: 545 às 13-03-2023 10:20:36
+{
+Erro na conexao com o servidor
+Erro: SQLSTATE[HY000] [1049] Unknown database 'classicmodels'
+}
+
+Código do erro: 414 às 13-03-2023 10:20:36
+{
+Erro na conexao com o servidor
+Erro: SQLSTATE[HY000] [1049] Unknown database 'classicmodels'
+}
+
+Código do erro: 288 às 13-03-2023 10:20:37
+{
+Erro na conexao com o servidor
+Erro: SQLSTATE[HY000] [1049] Unknown database 'classicmodels'
+}
+
+Código do erro: 880 às 13-03-2023 10:20:41
+{
+Erro na conexao com o servidor
+Erro: SQLSTATE[HY000] [1049] Unknown database 'classicmodels'
+}
+
+Código do erro: 871 às 13-03-2023 10:20:44
+{
+Erro na conexao com o servidor
+Erro: SQLSTATE[HY000] [1049] Unknown database 'classicmodels'
+}
+
+Código do erro: 369 às 13-03-2023 10:20:47
+{
+Erro na conexao com o servidor
+Erro: SQLSTATE[HY000] [1049] Unknown database 'classicmodels'
+}
+
+Código do erro: 571 às 13-03-2023 10:20:47
+{
+Erro na conexao com o servidor
+Erro: SQLSTATE[HY000] [1049] Unknown database 'classicmodels'
+}
+
+Código do erro: 214 às 13-03-2023 10:20:49
+{
+Erro na conexao com o servidor
+Erro: SQLSTATE[HY000] [1049] Unknown database 'classicmodels'
+}
+
+Código do erro: 665 às 13-03-2023 10:21:56
+{
+Erro na conexao com o servidor
+Erro: SQLSTATE[HY000] [1049] Unknown database 'classicmodels'
+}
+
+Código do erro: 973 às 13-03-2023 10:21:56
+{
+Erro na conexao com o servidor
+Erro: SQLSTATE[HY000] [1049] Unknown database 'classicmodels'
+}
+
+Código do erro: 921 às 13-03-2023 10:22:05
+{
+Erro na conexao com o servidor
+Erro: SQLSTATE[HY000] [1049] Unknown database 'classicmodels'
+}
+
+Código do erro: 459 às 13-03-2023 10:22:05
+{
+Erro na conexao com o servidor
+Erro: SQLSTATE[HY000] [1049] Unknown database 'classicmodels'
+}
+
+Código do erro: 553 às 13-03-2023 10:22:06
+{
+Erro na conexao com o servidor
+Erro: SQLSTATE[HY000] [1049] Unknown database 'classicmodels'
+}
+
+Código do erro: 710 às 13-03-2023 10:22:06
+{
+Erro na conexao com o servidor
+Erro: SQLSTATE[HY000] [1049] Unknown database 'classicmodels'
+}
+
+Código do erro: 119 às 13-03-2023 10:22:07
+{
+Erro na conexao com o servidor
+Erro: SQLSTATE[HY000] [1049] Unknown database 'classicmodels'
+}
+
+Código do erro: 940 às 13-03-2023 10:22:07
+{
+Erro na conexao com o servidor
+Erro: SQLSTATE[HY000] [1049] Unknown database 'classicmodels'
+}
+
+Código do erro: 999 às 13-03-2023 10:22:08
+{
+Erro na conexao com o servidor
+Erro: SQLSTATE[HY000] [1049] Unknown database 'classicmodels'
+}
+
+Código do erro: 234 às 13-03-2023 10:22:08
+{
+Erro na conexao com o servidor
+Erro: SQLSTATE[HY000] [1049] Unknown database 'classicmodels'
+}
+
+Código do erro: 92 às 13-03-2023 10:22:08
+{
+Erro na conexao com o servidor
+Erro: SQLSTATE[HY000] [1049] Unknown database 'classicmodels'
+}
+
+Código do erro: 507 às 13-03-2023 10:22:08
+{
+Erro na conexao com o servidor
+Erro: SQLSTATE[HY000] [1049] Unknown database 'classicmodels'
+}
+
+Código do erro: 172 às 13-03-2023 10:22:08
+{
+Erro na conexao com o servidor
+Erro: SQLSTATE[HY000] [1049] Unknown database 'classicmodels'
+}
+
+Código do erro: 679 às 13-03-2023 10:22:08
+{
+Erro na conexao com o servidor
+Erro: SQLSTATE[HY000] [1049] Unknown database 'classicmodels'
+}
+
+Código do erro: 737 às 13-03-2023 10:22:10
+{
+Erro na conexao com o servidor
+Erro: SQLSTATE[HY000] [1049] Unknown database 'classicmodels'
+}
+
+Código do erro: 148 às 13-03-2023 10:22:14
+{
+Erro na conexao com o servidor
+Erro: SQLSTATE[HY000] [1049] Unknown database 'classicmodels'
+}
+
+Código do erro: 216 às 13-03-2023 10:22:14
+{
+Erro na conexao com o servidor
+Erro: SQLSTATE[HY000] [1049] Unknown database 'classicmodels'
+}
+
+Código do erro: 797 às 13-03-2023 10:22:34
+{
+Erro na conexao com o servidor
+Erro: SQLSTATE[HY000] [1049] Unknown database 'classicmodels'
+}
+
+Código do erro: 38 às 13-03-2023 10:22:34
+{
+Erro na conexao com o servidor
+Erro: SQLSTATE[HY000] [1049] Unknown database 'classicmodels'
+}
+
+Código do erro: 615 às 13-03-2023 10:22:55
+{
+Erro na conexao com o servidor
+Erro: SQLSTATE[HY000] [1049] Unknown database 'classicmodels'
+}
+
+Código do erro: 62 às 13-03-2023 10:22:55
+{
+Erro na conexao com o servidor
+Erro: SQLSTATE[HY000] [1049] Unknown database 'classicmodels'
+}
+
+Código do erro: 737 às 13-03-2023 10:22:58
+{
+Erro na conexao com o servidor
+Erro: SQLSTATE[HY000] [1049] Unknown database 'classicmodels'
+}
+
+Código do erro: 385 às 13-03-2023 10:23:31
+{
+Erro na conexao com o servidor
+Erro: SQLSTATE[HY000] [1049] Unknown database 'classicmodels'
+}
+
+Código do erro: 509 às 13-03-2023 10:23:31
+{
+Erro na conexao com o servidor
+Erro: SQLSTATE[HY000] [1049] Unknown database 'classicmodels'
+}

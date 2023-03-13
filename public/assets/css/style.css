@@ -431,7 +431,7 @@ main .content .page-title p {
 
 @keyframes pageTitleH2 {
    from {
-      transform: translate(0, -200px);
+      transform: translate(0, -100px);
    }
    
    to {
@@ -441,12 +441,12 @@ main .content .page-title p {
 
 @keyframes pageTitleP {
    from {
-      transform: rotate3d(1, 1, 1, 0deg);
+      transform: translateX(100px);
       opacity: 0;
    }
    
    to {
-      transform: rotate3d(1, 1, 1, 360deg);
+      transform: translateX(0px);
       opacity: 1;
    }
 }
